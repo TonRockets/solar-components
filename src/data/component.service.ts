@@ -6,15 +6,15 @@ import { ComponentModel } from "../domain/component.model";
 export class ComponentService {
     constructor(private readonly prisma: PrismaService) { }
     
-    async createComponent(data: ComponentModel): Promise<void> {
+    async createComponent(data): Promise<void> {
       await this.prisma.solarComponent.create({
           data
         });
     }
 
     async getAllComponents(): Promise<ComponentModel[]> {
-        const surgicalData = await this.prisma.solarComponent.findMany();
-        return surgicalData;
+        const components = await this.prisma.solarComponent.findMany();
+        return components;
     }
 
     async getComponent(id: string): Promise<ComponentModel> {

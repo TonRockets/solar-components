@@ -3,7 +3,7 @@ import type { HttpResponse } from '../protocols/http-response'
 
 export const serverError = (error: any): HttpResponse => ({
   statusCode: 500,
-  body: new ServerError(error.stack)
+  body: new ServerError(error)
 })
 
 export const ok = (data: any): HttpResponse => ({
