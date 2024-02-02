@@ -1,7 +1,8 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsEnum, IsNotEmpty, IsNumber, IsString } from "class-validator";
-import { SegmentTypeEnum } from "./enums/segmentType";
+
 import { GroupNameEnum } from "./enums/groupEnum";
+import { SegmentTypeEnum } from "./enums/segmentType";
 
 export class CreateComponentDTO {    
       
